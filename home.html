@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyhan Satrio Rayo Charisharbian, S.Tr.P. — Quality Control, Operations & Visual Communication</title>
+    <meta name="description" content="Portofolio Reyhan Satrio Rayo Charisharbian, S.Tr.P. Lulusan D4 Politeknik Negeri Jember tersertifikasi BNSP di bidang Pengendalian Mutu (Quality Control), Manajemen Operasional, dan Desain Grafis.">
+    
+    <!-- Google Fonts: Inter & JetBrains Mono untuk kesan Swiss Editorial & Presisi Analitis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#3fe0d0',
+                            50: '#effefb',
+                            100: '#c7fff8',
+                            200: '#90fff2',
+                            300: '#3fe0d0',
+                            400: '#22c7b8',
+                            500: '#0da699',
+                            600: '#08847b',
+                            700: '#0b6963',
+                            800: '#0e534f',
+                            900: '#104542',
+                            950: '#052928',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS: Sistem Warna #3fe0d0, Fluid Typography & Micro-interactions -->
+    <style>
+        :root {
+            --brand-main: #3fe0d0;
+            --brand-strong: #0b6963;
+            --brand-soft: rgba(63, 224, 208, 0.14);
+            --bg-primary: #f5fbfb;
+            --bg-elevated: #ffffff;
+            --text-primary: #071f1e;
+            --text-secondary: #3b5c5a;
+            --text-muted: #6c8f8d;
+            --border-color: #d3e8e6;
+            --grid-line: rgba(11, 105, 99, 0.045);
+        }
+
+        html.dark {
+            --brand-main: #3fe0d0;
+            --brand-strong: #3fe0d0;
+            --brand-soft: rgba(63, 224, 208, 0.12);
+            --bg-primary: #061011;
+            --bg-elevated: #0c1a1c;
+            --text-primary: #f0fdfa;
+            --text-secondary: #92b5b3;
+            --text-muted: #527573;
+            --border-color: #163033;
+            --grid-line: rgba(63, 224, 208, 0.035);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            background-image: 
+                linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+            background-size: 3.5rem 3.5rem;
+        }
+
+        /* Fluid Typography menggunakan clamp() untuk skala Mobile-to-Desktop yang presisi */
+        .fluid-h1 {
+            font-size: clamp(2.1rem, 5vw + 0.5rem, 4.25rem);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+        }
+
+        .fluid-h2 {
+            font-size: clamp(1.45rem, 2.8vw + 0.5rem, 2.35rem);
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+        }
+
+        .fluid-lead {
+            font-size: clamp(1rem, 1.1vw + 0.6rem, 1.25rem);
+            line-height: 1.65;
+        }
+
+        /* Subtle Borders & Cards dengan sentuhan #3fe0d0 */
+        .swiss-border {
+            border-color: var(--border-color);
+        }
+
+        .swiss-card {
+            background-color: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.25s ease, 
+                        background-color 0.35s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .swiss-card:hover {
+            border-color: #3fe0d0;
+            box-shadow: 0 10px 30px -15px rgba(63, 224, 208, 0.18);
+        }
+
+        .brand-pill {
+            background-color: var(--brand-soft);
+            color: var(--brand-strong);
+            border: 1px solid rgba(63, 224, 208, 0.35);
+        }
+
+        .brand-btn-primary {
+            background-color: #3fe0d0;
+            color: #05201e;
+            font-weight: 600;
+            box-shadow: 0 4px 20px -4px rgba(63, 224, 208, 0.45);
+        }
+
+        .brand-btn-primary:hover {
+            background-color: #5ce8da;
+            box-shadow: 0 6px 25px -3px rgba(63, 224, 208, 0.6);
+        }
+
+        /* Custom Scrollbar Minimalis */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3fe0d0;
+        }
+
+        /* Animasi Indikator Status #3fe0d0 */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.85; }
+            80%, 100% { transform: scale(2.4); opacity: 0; }
+        }
+        .status-dot::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #3fe0d0;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        /* Hide scrollbar on filter pills mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#3fe0d0] selection:text-[#05201e] pb-24 md:pb-0">
+
+    <!-- Ambient Glow Top untuk Kedalaman Minimalis -->
+    <div class="pointer-events-none fixed top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-4xl h-64 bg-[#3fe0d0]/10 dark:bg-[#3fe0d0]/5 blur-3xl rounded-full -z-10"></div>
+
+    <!-- ==========================================
+         TOP HEADER (Sticky di Desktop & Mobile)
+    =========================================== -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-[var(--bg-primary)]/85 border-b swiss-border transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+            <!-- Brand / Identitas -->
+            <a href="#hero" class="group flex items-center gap-3 focus:outline-none">
+                <div class="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-[#3fe0d0]/50 shadow-sm group-hover:scale-95 transition-transform shrink-0 bg-[#0c1a1c]">
+                    <img src="image.png" alt="Reyhan Satrio Rayo Charisharbian" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-semibold tracking-tight leading-none">Reyhan Satrio R. C.</span>
+                    <span class="text-[11px] font-mono text-[var(--brand-strong)] mt-1">S.Tr.P. · BNSP QC CERTIFIED</span>
+                </div>
+            </a>
+
+            <!-- Navigasi Desktop -->
+            <nav aria-label="Navigasi Utama" class="hidden md:flex items-center gap-7 text-sm font-medium text-[var(--text-secondary)]">
+                <a href="#karya" class="hover:text-[#0b6963] dark:hover:text-[#3fe0d0] transition-colors py-1">Studi Kasus</a>
+                <a href="#pengalaman" class="hover:text-[#0b6963] dark:hover:text-[#3fe0d0] transition-colors py-1">Pengalaman</a>
+                <a href="#pendidikan" class="hover:text-[#0b6963] dark:hover:text-[#3fe0d0] transition-colors py-1">Pendidikan</a>
+                <a href="#keahlian" class="hover:text-[#0b6963] dark:hover:text-[#3fe0d0] transition-colors py-1">Keahlian</a>
+                <a href="#kontak" class="hover:text-[#0b6963] dark:hover:text-[#3fe0d0] transition-colors py-1">Kontak</a>
+            </nav>
+
+            <!-- Aksi Kanan: Lokasi/Jam & Theme Toggle -->
+            <div class="flex items-center gap-2.5">
+                <div class="hidden sm:flex items-center gap-1.5 text-xs font-mono text-[var(--text-secondary)] brand-pill px-2.5 py-1.5 rounded-lg">
+                    <span>SITUBONDO · WIB</span>
+                    <span id="live-clock" class="font-semibold">--:--</span>
+                </div>
+
+                <!-- Tombol Dark/Light Mode (Touch Target 40x40px ramah jari) -->
+                <button id="theme-toggle" type="button" aria-label="Ganti Tema Terang atau Gelap" 
+                    class="w-10 h-10 rounded-xl border swiss-border bg-[var(--bg-elevated)] flex items-center justify-center text-[var(--text-primary)] hover:border-[#3fe0d0] active:scale-95 transition-all">
+                    <!-- Sun Icon -->
+                    <svg id="icon-sun" class="w-4 h-4 hidden dark:block text-[#3fe0d0]" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"></path>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg id="icon-moon" class="w-4 h-4 block dark:hidden text-[#0b6963]" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MOBILE FLOATING BOTTOM NAVIGATION (Thumb-Friendly)
+    =========================================== -->
+    <nav aria-label="Navigasi Mobile" class="md:hidden fixed bottom-4 inset-x-4 z-40 bg-[#081618]/95 dark:bg-[#0c1f22]/95 backdrop-blur-md text-white rounded-2xl p-1.5 shadow-2xl border border-[#3fe0d0]/30 flex items-center justify-around">
+        <a href="#hero" class="mobile-nav-link flex-1 py-2.5 text-center rounded-xl text-xs font-medium text-[#3fe0d0] bg-[#3fe0d0]/10 transition-colors">Profil</a>
+        <a href="#karya" class="mobile-nav-link flex-1 py-2.5 text-center rounded-xl text-xs font-medium text-neutral-300 hover:text-[#3fe0d0] transition-colors">Karya</a>
+        <a href="#pengalaman" class="mobile-nav-link flex-1 py-2.5 text-center rounded-xl text-xs font-medium text-neutral-300 hover:text-[#3fe0d0] transition-colors">Karier</a>
+        <a href="#keahlian" class="mobile-nav-link flex-1 py-2.5 text-center rounded-xl text-xs font-medium text-neutral-300 hover:text-[#3fe0d0] transition-colors">Keahlian</a>
+        <a href="#kontak" class="mobile-nav-link flex-1 py-2.5 text-center rounded-xl text-xs font-medium text-neutral-300 hover:text-[#3fe0d0] transition-colors">Kontak</a>
+    </nav>
+
+    <!-- ==========================================
+         MAIN CONTENT CONTAINER
+    =========================================== -->
+    <main class="max-w-6xl mx-auto px-5 sm:px-8">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="pt-10 pb-16 md:pt-20 md:pb-28 border-b swiss-border">
+            <!-- Status & Lokasi Badge -->
+            <div class="flex flex-wrap items-center gap-2.5 mb-7">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full brand-pill">
+                    <span class="relative flex h-2 w-2 status-dot">
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3fe0d0]"></span>
+                    </span>
+                    <span class="text-xs font-mono font-medium tracking-tight">
+                        Terbuka untuk Karir & Kolaborasi: Quality Control · Operations · Desain Grafis
+                    </span>
+                </div>
+                <span class="text-xs font-mono text-[var(--text-muted)] px-2.5 py-1 rounded-md border swiss-border bg-[var(--bg-elevated)]">
+                    📍 Situbondo, Jawa Timur
+                </span>
+            </div>
+
+            <!-- Nama & Gelar -->
+            <div class="mb-3 font-mono text-xs sm:text-sm uppercase tracking-widest text-[var(--brand-strong)] font-semibold">
+                REYHAN SATRIO RAYO CHARISHARBIAN, S.Tr.P.
+            </div>
+
+            <!-- Headline / Value Proposition -->
+            <h1 class="fluid-h1 font-semibold tracking-tight max-w-4xl">
+                Memadukan <span class="underline decoration-2 underline-offset-8 decoration-[#3fe0d0]">analisis operasional</span> berbasis data &amp; komunikasi visual untuk standar mutu terbaik.
+            </h1>
+
+            <!-- Intro & Editorial Asymmetric Grid -->
+            <div class="mt-9 md:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+                <div class="lg:col-span-7">
+                    <p class="fluid-lead text-[var(--text-secondary)] font-normal">
+                        Lulusan <strong class="text-[var(--text-primary)] font-semibold">Sarjana Terapan (D4) Manajemen Pertanian / Agroindustri Politeknik Negeri Jember</strong> yang tersertifikasi <strong class="text-[var(--text-primary)] font-semibold">BNSP</strong> di bidang Pengendalian Mutu dan Kewirausahaan. Berpengalaman dalam evaluasi operasional &amp; K3 industri (<em class="italic">Fishbone Diagram</em>), analisis <em class="italic">Statistical Process Control (SPC)</em>, serta <strong class="text-[var(--text-primary)] font-semibold">Desain Grafis</strong> untuk menerjemahkan SOP dan data rumit menjadi instruksi visual yang jelas dan terukur.
+                    </p>
+
+                    <!-- CTAs (Mobile-first Full Width, Desktop Auto) -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                        <a href="#karya" class="brand-btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm active:scale-[0.99] transition-all">
+                            <span>Lihat Studi Kasus &amp; Riset</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <a id="hero-wa-btn" href="#kontak" class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] bg-[var(--bg-elevated)] hover:bg-[#25D366]/5 text-sm font-medium text-[var(--text-primary)] active:scale-[0.99] transition-all shadow-sm">
+                            <svg class="w-4 h-4 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.294 0-7.784 3.49-7.784 7.784 0 1.411.378 2.735 1.036 3.877l-1.082 3.953 4.053-1.062c1.104.604 2.37.95 3.719.95 4.294 0 7.784-3.49 7.784-7.784 0-4.294-3.49-7.784-7.726-7.718z"/>
+                            </svg>
+                            <span class="font-mono text-xs sm:text-sm">Hubungi via WhatsApp</span>
+                            <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Foto Profil Eksekutif & Key Career Metrics -->
+                <div class="lg:col-span-5 flex flex-col gap-3.5">
+                    <!-- Profile Card dengan D:\PortoRayo\image.png -->
+                    <div class="swiss-card rounded-2xl overflow-hidden relative group p-3 sm:p-3.5 border border-[#3fe0d0]/30 shadow-xl bg-[var(--bg-elevated)]">
+                        <div class="relative overflow-hidden rounded-xl aspect-[4/4.2] sm:aspect-[4/3.7] bg-[#0c1a1c]">
+                            <img src="image.png" alt="Reyhan Satrio Rayo Charisharbian, S.Tr.P." 
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out">
+                            
+                            <!-- Overlay Gradient Elegan -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#061011]/90 via-[#061011]/25 to-transparent"></div>
+                            
+                            <!-- Floating Status Badge -->
+                            <div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono shadow-md">
+                                <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+                                <span>WhatsApp Siap Terhubung</span>
+                            </div>
+
+                            <div class="absolute bottom-3 inset-x-3 p-3 rounded-xl bg-[var(--bg-elevated)]/90 backdrop-blur-md border swiss-border flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs font-semibold text-[var(--text-primary)] leading-tight">Reyhan Satrio R. C.</div>
+                                    <div class="text-[10px] font-mono text-[var(--brand-strong)] font-medium">S.Tr.P. · Quality Control &amp; Operations</div>
+                                </div>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded-md brand-pill font-semibold">BNSP RI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Career Metrics (Bento Mini-Grid) -->
+                    <div class="grid grid-cols-3 gap-2.5">
+                        <div class="swiss-card p-3 rounded-xl relative overflow-hidden">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0] mb-1.5"></div>
+                            <div class="font-mono text-lg sm:text-xl font-bold text-[var(--brand-strong)]">BNSP</div>
+                            <div class="text-[10px] sm:text-[11px] text-[var(--text-secondary)] mt-0.5 leading-snug">QC &amp; Wirausaha</div>
+                        </div>
+                        <div class="swiss-card p-3 rounded-xl relative overflow-hidden">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0] mb-1.5"></div>
+                            <div class="font-mono text-lg sm:text-xl font-bold text-[var(--brand-strong)]">SPC</div>
+                            <div class="text-[10px] sm:text-[11px] text-[var(--text-secondary)] mt-0.5 leading-snug">Kendali Mutu</div>
+                        </div>
+                        <div class="swiss-card p-3 rounded-xl relative overflow-hidden">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0] mb-1.5"></div>
+                            <div class="font-mono text-lg sm:text-xl font-bold text-[var(--brand-strong)]">4+</div>
+                            <div class="text-[10px] sm:text-[11px] text-[var(--text-secondary)] mt-0.5 leading-snug">Peran Industri</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STUDI KASUS, RISET & PROYEK OPERASIONAL -->
+        <section id="karya" class="py-16 md:py-24 border-b swiss-border">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                    <div class="text-xs font-mono uppercase tracking-widest text-[var(--brand-strong)] mb-2">01 / Portofolio &amp; Studi Kasus</div>
+                    <h2 class="fluid-h2 font-semibold">Evaluasi Operasional, Mutu &amp; Visual SOP</h2>
+                </div>
+
+                <!-- Filter Kategori (Thumb-friendly horizontal scroll di mobile) -->
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" role="tablist" aria-label="Filter Kategori Proyek">
+                    <button type="button" data-filter="Semua" class="filter-btn active px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 brand-btn-primary">
+                        Semua (4)
+                    </button>
+                    <button type="button" data-filter="Quality Control" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all shrink-0 border swiss-border bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:border-[#3fe0d0]">
+                        Quality Control &amp; SPC
+                    </button>
+                    <button type="button" data-filter="Operasional & K3" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all shrink-0 border swiss-border bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:border-[#3fe0d0]">
+                        Operasional &amp; K3
+                    </button>
+                    <button type="button" data-filter="Desain Visual SOP" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all shrink-0 border swiss-border bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:border-[#3fe0d0]">
+                        Desain Visual SOP
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid Proyek (Di-render secara dinamis via JS) -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- 3. PENGALAMAN KERJA & PRAKTEK KERJA LAPANG (PKL INDUSTRI) -->
+        <section id="pengalaman" class="py-16 md:py-24 border-b swiss-border">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Kolom Kiri: Ringkasan & Nilai Tambah Unik -->
+                <div class="lg:col-span-5">
+                    <div class="lg:sticky lg:top-24">
+                        <div class="text-xs font-mono uppercase tracking-widest text-[var(--brand-strong)] mb-2">02 / Rekam Jejak</div>
+                        <h2 class="fluid-h2 font-semibold">Pengalaman Kerja &amp; Industri</h2>
+                        <p class="mt-4 text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+                            Pengalaman saya dibentuk langsung di lantai produksi pabrik gula berskala besar, pengolahan produk agribisnis &amp; cokelat, hingga pengelolaan operasional harian kedai kopi.
+                        </p>
+                        
+                        <div class="mt-7 p-5 rounded-2xl swiss-card border-l-4 border-l-[#3fe0d0]">
+                            <div class="text-xs font-mono uppercase text-[var(--brand-strong)] font-semibold mb-2">Nilai Tambah Utama</div>
+                            <blockquote class="text-sm font-medium text-[var(--text-primary)] leading-relaxed">
+                                "Menggabungkan ketelitian Quality Control berbasis statistik dengan keahlian Desain Grafis—mengubah data dan SOP operasional yang rumit menjadi panduan kerja visual yang mudah dipahami tim di lapangan."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Timeline Pengalaman Lengkap dari CV -->
+                <div class="lg:col-span-7">
+                    <div class="divide-y swiss-border border-t border-b swiss-border">
+                        
+                        <!-- Item 1: Kedai Kopi Adirasa -->
+                        <article class="py-7 group">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#3fe0d0]"></span>
+                                    <h3 class="text-lg font-semibold">Barista &amp; Pelayanan Pelanggan</h3>
+                                </div>
+                                <span class="font-mono text-xs px-2.5 py-1 rounded-md brand-pill shrink-0">Januari 2026 — Sekarang</span>
+                            </div>
+                            <div class="text-xs font-mono text-[var(--text-muted)] mb-3 pl-4">Kedai Kopi Adirasa · Situbondo, Jawa Timur</div>
+                            <p class="text-sm text-[var(--text-secondary)] leading-relaxed pl-4">
+                                Bertanggung jawab penuh dalam mengelola operasional harian bar, manajemen stok bahan baku harian, serta memastikan standar kualitas pelayanan dan konsistensi cita rasa produk F&amp;B tetap terjaga bagi pelanggan.
+                            </p>
+                        </article>
+
+                        <!-- Item 2: PT Madubaru PG-PS Madukismo (Project Engineer & PKL Industri) -->
+                        <article class="py-7 group">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#3fe0d0]"></span>
+                                    <h3 class="text-lg font-semibold">Project Engineer &amp; Operations Safety Evaluator</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[var(--text-muted)] shrink-0">Juli 2025 — Juli 2026 ( &amp; PKL 5 Bln )</span>
+                            </div>
+                            <div class="text-xs font-mono text-[var(--text-muted)] mb-3 pl-4">PT Madubaru PG-PS Madukismo · Bantul, DI Yogyakarta</div>
+                            <p class="text-sm text-[var(--text-secondary)] leading-relaxed pl-4">
+                                Melakukan pengamatan dan evaluasi operasional di stasiun penyelesaian (<em class="italic">finishing station</em>) pabrik gula. Berfokus pada analisis Keselamatan dan Kesehatan Kerja (K3) dengan menerapkan <strong class="text-[var(--text-primary)]">diagram Fishbone</strong> untuk memetakan potensi risiko dari faktor manusia, mesin (<em class="italic">crane</em> &amp; timbangan), serta suhu lingkungan kerja, sekaligus mengevaluasi ergonomi dan efektivitas Alat Pelindung Diri (APD).
+                            </p>
+                        </article>
+
+                        <!-- Item 3: CV. Raddina Chocolate -->
+                        <article class="py-7 group">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#3fe0d0]"></span>
+                                    <h3 class="text-lg font-semibold">Kitchen Staff</h3>
+                                </div>
+                                <span class="font-mono text-xs px-2.5 py-1 rounded-md brand-pill shrink-0">Agustus 2024 — Sekarang</span>
+                            </div>
+                            <div class="text-xs font-mono text-[var(--text-muted)] mb-3 pl-4">CV. Raddina Chocolate · Jember, Jawa Timur</div>
+                            <p class="text-sm text-[var(--text-secondary)] leading-relaxed pl-4">
+                                Menjalankan operasional produksi dapur pengolahan cokelat secara disiplin, menjaga higienitas peralatan dan bahan baku, serta memastikan setiap tahapan pengolahan mematuhi takaran dan standar mutu produk.
+                            </p>
+                        </article>
+
+                        <!-- Item 4: CV Raddina NFB -->
+                        <article class="py-7 group">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-[#3fe0d0]"></span>
+                                    <h3 class="text-lg font-semibold">Operations Intern (PKL Industri)</h3>
+                                </div>
+                                <span class="font-mono text-xs text-[var(--text-muted)] shrink-0">Durasi 5 Bulan</span>
+                            </div>
+                            <div class="text-xs font-mono text-[var(--text-muted)] mb-3 pl-4">CV Raddina NFB · Jember, Jawa Timur</div>
+                            <p class="text-sm text-[var(--text-secondary)] leading-relaxed pl-4">
+                                Terlibat aktif dalam pengawasan operasional harian dan pengendalian mutu produk olahan agribisnis. Memastikan seluruh proses produksi dan pengemasan berjalan sesuai <strong class="text-[var(--text-primary)]">Prosedur Operasional Standar (SOP)</strong> perusahaan guna menjaga konsistensi kualitas dan mendukung kelancaran distribusi.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PENDIDIKAN & SERTIFIKASI -->
+        <section id="pendidikan" class="py-16 md:py-24 border-b swiss-border">
+            <div class="mb-10">
+                <div class="text-xs font-mono uppercase tracking-widest text-[var(--brand-strong)] mb-2">03 / Akademik &amp; Lisensi</div>
+                <h2 class="fluid-h2 font-semibold">Pendidikan &amp; Sertifikasi Kompetensi</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Politeknik Negeri Jember -->
+                <div class="md:col-span-7 swiss-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-lg text-xs font-mono font-semibold brand-pill">2022 — 2026</span>
+                            <span class="font-mono text-xs text-[var(--text-muted)]">Gelar: S.Tr.P.</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-semibold">Politeknik Negeri Jember</h3>
+                        <p class="text-sm font-mono text-[var(--brand-strong)] mt-1">
+                            Sarjana Terapan (D4) Manajemen Pertanian — Jurusan Manajemen Agribisnis / Agroindustri
+                        </p>
+
+                        <div class="mt-6 space-y-3 text-sm text-[var(--text-secondary)]">
+                            <div class="p-4 rounded-xl bg-[var(--bg-primary)] border swiss-border">
+                                <div class="font-mono text-[11px] uppercase text-[var(--brand-strong)] font-semibold mb-1">Fokus Penelitian Tugas Akhir</div>
+                                <p class="text-[var(--text-primary)] font-medium">
+                                    Pengendalian Kualitas Produk Menggunakan Metode Statistical Process Control (SPC) untuk menjaga konsistensi mutu dan meminimalkan tingkat kecacatan produk.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t swiss-border flex items-center justify-between text-xs font-mono text-[var(--text-secondary)]">
+                        <span>Aktivitas &amp; Organisasi:</span>
+                        <span class="text-[var(--text-primary)] font-medium">Anggota Aktif UKM Futsal Politeknik Negeri Jember</span>
+                    </div>
+                </div>
+
+                <!-- Sertifikasi BNSP & SMA -->
+                <div class="md:col-span-5 flex flex-col gap-6">
+                    <!-- BNSP Card -->
+                    <div class="swiss-card p-6 rounded-2xl flex-1 border-t-4 border-t-[#3fe0d0]">
+                        <div class="font-mono text-xs uppercase text-[var(--brand-strong)] font-semibold mb-2">SERTIFIKASI KOMPETENSI NASIONAL</div>
+                        <h3 class="text-lg font-semibold mb-3">Tersertifikasi Resmi BNSP</h3>
+                        <ul class="space-y-3 text-sm text-[var(--text-secondary)]">
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-5 h-5 rounded-md brand-pill flex items-center justify-center text-xs font-mono shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-[var(--text-primary)] block">Pengendalian Mutu (Quality Control)</strong>
+                                    <span class="text-xs">Standarisasi inspeksi mutu, kepatuhan SOP produksi, dan evaluasi produk.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="w-5 h-5 rounded-md brand-pill flex items-center justify-center text-xs font-mono shrink-0 mt-0.5">✓</span>
+                                <div>
+                                    <strong class="text-[var(--text-primary)] block">Kewirausahaan (Entrepreneurship)</strong>
+                                    <span class="text-xs">Manajemen operasional unit bisnis, analisis efisiensi produk, dan pengembangan usaha.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SMA 1 Suboh -->
+                    <div class="swiss-card p-6 rounded-2xl">
+                        <div class="flex items-center justify-between font-mono text-xs text-[var(--text-muted)] mb-1">
+                            <span>PENDIDIKAN MENENGAH</span>
+                            <span>Situbondo</span>
+                        </div>
+                        <h3 class="text-base font-semibold">SMA Negeri 1 Suboh</h3>
+                        <p class="text-xs font-mono text-[var(--text-secondary)] mt-1">Jurusan Ilmu Pengetahuan Alam (IPA) dan Biologi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MATRIKS KEAHLIAN (SKILLS MATRIX) -->
+        <section id="keahlian" class="py-16 md:py-24 border-b swiss-border">
+            <div class="mb-10">
+                <div class="text-xs font-mono uppercase tracking-widest text-[var(--brand-strong)] mb-2">04 / Kapabilitas Inti</div>
+                <h2 class="fluid-h2 font-semibold">Matriks Keahlian &amp; Spesialisasi</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Pillar 1: Quality Control -->
+                <div class="swiss-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="font-mono text-xs text-[var(--brand-strong)] font-semibold mb-3">01 // QUALITY CONTROL</div>
+                        <h3 class="text-base font-semibold mb-4">Pengendalian Mutu</h3>
+                        <ul class="space-y-2.5 text-sm text-[var(--text-secondary)]">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Statistical Process Control (SPC)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Inspeksi Mutu &amp; Minimasi Defect</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Pengawasan Pengemasan Produk</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Audit Kepatuhan Standar Mutu</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t swiss-border font-mono text-[11px] text-[var(--brand-strong)]">
+                        BNSP QC · Peta Kendali · SOP
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Operations Management -->
+                <div class="swiss-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="font-mono text-xs text-[var(--brand-strong)] font-semibold mb-3">02 // OPERATIONS</div>
+                        <h3 class="text-base font-semibold mb-4">Manajemen Operasional</h3>
+                        <ul class="space-y-2.5 text-sm text-[var(--text-secondary)]">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Operations Management</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Penyusunan &amp; Pengawasan SOP</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Manajemen Produksi Agribisnis</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Koordinasi Alur Distribusi</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t swiss-border font-mono text-[11px] text-[var(--brand-strong)]">
+                        Agroindustri · Efisiensi Proses
+                    </div>
+                </div>
+
+                <!-- Pillar 3: K3 & Safety Evaluation -->
+                <div class="swiss-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="font-mono text-xs text-[var(--brand-strong)] font-semibold mb-3">03 // SAFETY &amp; F&amp;B</div>
+                        <h3 class="text-base font-semibold mb-4">Evaluasi K3 &amp; F&amp;B</h3>
+                        <ul class="space-y-2.5 text-sm text-[var(--text-secondary)]">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Analisis Risiko Diagram Fishbone</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Evaluasi Ergonomi &amp; APD Pekerja</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Kitchen Staff &amp; Produksi Cokelat</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Operasional Barista &amp; Layanan</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t swiss-border font-mono text-[11px] text-[var(--brand-strong)]">
+                        K3 Industri · Higienitas F&amp;B
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Visual Communication -->
+                <div class="swiss-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="font-mono text-xs text-[var(--brand-strong)] font-semibold mb-3">04 // VISUAL DESIGN</div>
+                        <h3 class="text-base font-semibold mb-4">Desain Grafis &amp; Visual</h3>
+                        <ul class="space-y-2.5 text-sm text-[var(--text-secondary)]">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Visualisasi Instruksi Kerja (SOP)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Infografis Data Operasional &amp; K3</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Desain Komunikasi Internal</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#3fe0d0]"></span>Desain Kemasan &amp; Media Produk</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t swiss-border font-mono text-[11px] text-[var(--brand-strong)]">
+                        Visual SOP · Data Translation
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT / KONTAK SECTION -->
+        <section id="kontak" class="py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Info Kontak Langsung -->
+                <div class="lg:col-span-5">
+                    <div class="text-xs font-mono uppercase tracking-widest text-[var(--brand-strong)] mb-2">05 / Hubungi Saya</div>
+                    <h2 class="fluid-h2 font-semibold">Mari berkolaborasi meningkatkan standar operasional Anda.</h2>
+                    <p class="mt-4 text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
+                        Saya terbuka untuk peluang karir penuh waktu (<em class="italic">full-time</em>), proyek evaluasi mutu, manajemen operasional, maupun perancangan komunikasi visual SOP di seluruh Indonesia.
+                    </p>
+
+                    <!-- Direct WhatsApp Contact Box -->
+                    <div class="mt-7 p-5 rounded-2xl swiss-card border-l-4 border-l-[#25D366]">
+                        <div class="flex items-center justify-between text-xs font-mono text-[var(--text-muted)] mb-1">
+                            <span>HUBUNGI VIA WHATSAPP RESMI</span>
+                            <span class="text-[#25D366] font-semibold flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span> Responsif
+                            </span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-3">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-lg bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.294 0-7.784 3.49-7.784 7.784 0 1.411.378 2.735 1.036 3.877l-1.082 3.953 4.053-1.062c1.104.604 2.37.95 3.719.95 4.294 0 7.784-3.49 7.784-7.784 0-4.294-3.49-7.784-7.726-7.718z"/>
+                                    </svg>
+                                </div>
+                                <span class="font-mono text-sm sm:text-base font-semibold">+62 877-7576-0566</span>
+                            </div>
+                            <button id="contact-copy-wa" type="button" class="brand-btn-primary px-3.5 py-2 rounded-lg text-xs font-mono active:scale-95 transition-all shrink-0">
+                                Salin Nomor WA
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tautan Eksternal / Sosial -->
+                    <div class="mt-7">
+                        <div class="text-xs font-mono text-[var(--text-muted)] mb-3">JEJARING PROFESIONAL &amp; DOKUMEN</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="https://www.linkedin.com/in/reyhan-satrio-rayo-charisharbian-b118b724a" target="_blank" rel="noopener noreferrer" class="swiss-card px-4 py-3.5 rounded-xl flex items-center justify-between text-sm font-medium hover:border-[#3fe0d0] transition-all">
+                                <span>LinkedIn Profil</span>
+                                <span class="font-mono text-xs text-[var(--brand-strong)]">↗</span>
+                            </a>
+                            <button type="button" id="print-cv-btn" class="swiss-card px-4 py-3.5 rounded-xl flex items-center justify-between text-sm font-medium hover:border-[#3fe0d0] transition-all text-left">
+                                <span>Cetak / Simpan CV</span>
+                                <span class="font-mono text-xs text-[var(--brand-strong)]">PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulir Pesan Cepat Langsung ke WhatsApp -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" novalidate class="swiss-card p-6 sm:p-8 rounded-2xl space-y-5">
+                        <div class="flex items-center justify-between border-b swiss-border pb-4">
+                            <div>
+                                <span class="text-sm font-semibold block">Kirim Pesan via WhatsApp</span>
+                                <span class="text-xs text-[var(--text-muted)] mt-0.5">Otomatis diarahkan langsung ke chat WhatsApp</span>
+                            </div>
+                            <span class="font-mono text-xs text-[#25D366] font-semibold flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-[#25D366]"></span> WA Direct
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-xs font-mono uppercase text-[var(--text-secondary)] mb-2">Nama Anda / Perusahaan *</label>
+                                <input type="text" id="name" name="name" required placeholder="Nama Perekrut / Instansi"
+                                    class="w-full px-4 py-3 rounded-xl bg-[var(--bg-primary)] border swiss-border text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#3fe0d0] transition-colors">
+                                <p id="error-name" class="hidden mt-1.5 text-xs text-red-500 font-mono">Nama wajib diisi minimal 2 karakter.</p>
+                            </div>
+
+                            <div>
+                                <label for="contact-info" class="block text-xs font-mono uppercase text-[var(--text-secondary)] mb-2">Nomor WA / Kontak Anda *</label>
+                                <input type="text" id="contact-info" name="contact-info" required placeholder="08xxxxxxxxxx atau email@instansi.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-[var(--bg-primary)] border swiss-border text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#3fe0d0] transition-colors">
+                                <p id="error-contact" class="hidden mt-1.5 text-xs text-red-500 font-mono">Kontak pengirim wajib diisi.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="scope" class="block text-xs font-mono uppercase text-[var(--text-secondary)] mb-2">Bidang Kebutuhan / Posisi</label>
+                            <select id="scope" name="scope"
+                                class="w-full px-4 py-3 rounded-xl bg-[var(--bg-primary)] border swiss-border text-sm text-[var(--text-primary)] focus:outline-none focus:border-[#3fe0d0] transition-colors">
+                                <option value="Quality Control / Quality Assurance (QC/QA)">Quality Control / Quality Assurance (QC/QA)</option>
+                                <option value="Manajemen Operasional & Produksi">Manajemen Operasional &amp; Produksi</option>
+                                <option value="Evaluasi K3 & Standarisasi SOP">Evaluasi K3 &amp; Standarisasi SOP</option>
+                                <option value="Desain Grafis & Komunikasi Visual SOP">Desain Grafis &amp; Komunikasi Visual SOP</option>
+                                <option value="Operasional F&B / Barista / Kitchen">Operasional F&amp;B / Barista / Kitchen</option>
+                                <option value="Konsultasi / Rekrutmen Lainnya">Konsultasi / Rekrutmen Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-mono uppercase text-[var(--text-secondary)] mb-2">Pesan atau Detail Kebutuhan *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Halo Reyhan, kami tertarik untuk berdiskusi mengenai posisi Quality Control / Operasional..."
+                                class="w-full px-4 py-3 rounded-xl bg-[var(--bg-primary)] border swiss-border text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[#3fe0d0] transition-colors resize-y"></textarea>
+                            <p id="error-message" class="hidden mt-1.5 text-xs text-red-500 font-mono">Mohon tuliskan pesan Anda (minimal 10 karakter).</p>
+                        </div>
+
+                        <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <span class="text-xs text-[var(--text-muted)] flex items-center gap-1.5">
+                                <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.294 0-7.784 3.49-7.784 7.784 0 1.411.378 2.735 1.036 3.877l-1.082 3.953 4.053-1.062c1.104.604 2.37.95 3.719.95 4.294 0 7.784-3.49 7.784-7.784 0-4.294-3.49-7.784-7.726-7.718z"/>
+                                </svg>
+                                Form akan langsung mengarahkan pesan rapi ke WhatsApp
+                            </span>
+                            <button type="submit" class="brand-btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm active:scale-[0.99] transition-all shrink-0">
+                                <span>Kirim via WhatsApp</span>
+                                <svg class="w-4 h-4 text-[#05201e]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.294 0-7.784 3.49-7.784 7.784 0 1.411.378 2.735 1.036 3.877l-1.082 3.953 4.053-1.062c1.104.604 2.37.95 3.719.95 4.294 0 7.784-3.49 7.784-7.784 0-4.294-3.49-7.784-7.726-7.718z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="border-t swiss-border py-10 text-xs text-[var(--text-muted)]">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-mono text-center sm:text-left">
+                © 2026 Reyhan Satrio Rayo Charisharbian, S.Tr.P. · Situbondo, Jawa Timur.
+            </div>
+            <div class="font-mono flex items-center gap-4">
+                <span class="text-[var(--brand-strong)]">Tema #3fe0d0</span>
+                <span>·</span>
+                <a href="#hero" class="hover:text-[#3fe0d0] underline underline-offset-4">Kembali ke atas ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         CASE STUDY MODAL / DRAWER (Accessible Overlay)
+    =========================================== -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center p-0 sm:p-6 bg-black/70 backdrop-blur-xs transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Modal Content Container -->
+        <div class="w-full max-w-2xl max-h-[88vh] overflow-y-auto bg-[var(--bg-elevated)] border-t-2 sm:border-2 border-[#3fe0d0]/50 rounded-t-3xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl transform transition-transform">
+            <div class="flex items-start justify-between gap-4 border-b swiss-border pb-4">
+                <div>
+                    <div id="modal-category" class="font-mono text-xs uppercase text-[var(--brand-strong)] font-semibold">KATEGORI</div>
+                    <h3 id="modal-title" class="text-xl sm:text-2xl font-semibold mt-1">Judul Studi Kasus</h3>
+                </div>
+                <button id="close-modal" type="button" aria-label="Tutup detail studi kasus" class="w-9 h-9 rounded-lg border swiss-border flex items-center justify-center text-[var(--text-secondary)] hover:border-[#3fe0d0] hover:text-[#3fe0d0]">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="py-6 space-y-6 text-sm leading-relaxed text-[var(--text-secondary)]">
+                <!-- Impact Highlight Box -->
+                <div class="p-4 rounded-xl brand-pill">
+                    <div class="font-mono text-[11px] uppercase opacity-80 mb-1">FOKUS CAPAIAN &amp; DAMPAK OPERASIONAL</div>
+                    <div id="modal-impact" class="text-base font-semibold text-[var(--text-primary)]"></div>
+                </div>
+
+                <div>
+                    <h4 class="font-mono text-xs uppercase text-[var(--brand-strong)] font-semibold mb-2">01 / Latar Belakang &amp; Tantangan Lapangan</h4>
+                    <p id="modal-challenge"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-mono text-xs uppercase text-[var(--brand-strong)] font-semibold mb-2">02 / Metode Analisis &amp; Eksekusi</h4>
+                    <p id="modal-solution"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-mono text-xs uppercase text-[var(--brand-strong)] font-semibold mb-2">03 / Instrumen, Metode &amp; Keahlian</h4>
+                    <div id="modal-stack" class="flex flex-wrap gap-2 pt-1"></div>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t swiss-border flex items-center justify-between">
+                <span id="modal-year" class="font-mono text-xs text-[var(--text-muted)]">Periode</span>
+                <button id="modal-close-btn" type="button" class="brand-btn-primary px-5 py-2.5 rounded-xl text-xs font-mono">
+                    Tutup Detail
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         TOAST NOTIFICATION (Non-intrusive Feedback)
+    =========================================== -->
+    <div id="toast" role="status" aria-live="polite" class="fixed bottom-20 md:bottom-8 right-5 z-50 pointer-events-none opacity-0 translate-y-3 transition-all duration-300">
+        <div class="bg-[#07191b] text-white px-4 py-3 rounded-xl shadow-2xl border border-[#3fe0d0]/50 flex items-center gap-2.5 text-xs font-mono">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#3fe0d0]"></span>
+            <span id="toast-message">Tersalin ke papan klip</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MODULAR VANILLA JAVASCRIPT
+    =========================================== -->
+    <script>
+        (function () {
+            'use strict';
+
+            /* ------------------------------------------
+               1. DATA STUDI KASUS & PROYEK REYHAN
+            ------------------------------------------- */
+            const PROJECTS_DATA = [
+                {
+                    id: 'spc-polije',
+                    title: 'Pengendalian Mutu Produk dengan Metode Statistical Process Control (SPC)',
+                    client: 'Penelitian Tugas Akhir — Politeknik Negeri Jember',
+                    year: '2025–2026',
+                    category: 'Quality Control',
+                    summary: 'Riset terapan pengendalian kualitas produksi agribisnis menggunakan metode statistik SPC untuk memantau variabilitas proses dan menekan tingkat produk cacat (defect).',
+                    impactMetric: 'Identifikasi deviasi mutu terukur & rekomendasi stabilitas proses produksi',
+                    challenge: 'Fluktuasi kualitas pada proses pengolahan produk agribisnis dapat memicu tingginya tingkat kecacatan produk akhir apabila hanya mengandalkan inspeksi akhir tanpa pemantauan statistik berkala.',
+                    solution: 'Menerapkan analisis Statistical Process Control (SPC) melalui peta kendali statistik untuk mendeteksi penyimpangan proses di luar batas kendali lebih dini, serta menyusun langkah korektif berbasis data guna menjaga konsistensi mutu.',
+                    stack: ['Statistical Process Control (SPC)', 'Quality Control (BNSP)', 'Peta Kendali Mutu', 'Analisis Data Operasional', 'Manajemen Agroindustri']
+                },
+                {
+                    id: 'madukismo-k3',
+                    title: 'Evaluasi Operasional K3 & Ergonomi APD Stasiun Penyelesaian',
+                    client: 'PT Madubaru PG-PS Madukismo (Yogyakarta)',
+                    year: '2025–2026',
+                    category: 'Operasional & K3',
+                    summary: 'Evaluasi menyeluruh Keselamatan dan Kesehatan Kerja (K3) di finishing station pabrik gula menggunakan pemetaan diagram Fishbone dan uji efektivitas ergonomi APD.',
+                    impactMetric: 'Pemetaan akar risiko 4 faktor utama & peningkatan standar perlindungan pekerja',
+                    challenge: 'Stasiun penyelesaian (finishing station) pabrik gula memiliki intensitas kerja tinggi dengan potensi bahaya kompleks mulai dari pengoperasian alat berat (crane & timbangan), suhu lingkungan kerja, hingga kepatuhan penggunaan APD.',
+                    solution: 'Melaksanakan observasi langsung selama 5 bulan dan memetakan akar masalah menggunakan Diagram Fishbone (faktor Manusia, Mesin crane & timbangan, Metode, dan Suhu Lingkungan). Mengevaluasi kenyamanan ergonomis APD agar pekerja terlindungi secara optimal tanpa menghambat produktivitas.',
+                    stack: ['Fishbone Diagram', 'Evaluasi K3 Industri', 'Ergonomi APD', 'Finishing Station Ops', 'Risk Mapping']
+                },
+                {
+                    id: 'raddina-sop',
+                    title: 'Pengawasan Mutu Produksi & Transformasi Visual SOP Agribisnis',
+                    client: 'CV Raddina NFB & CV. Raddina Chocolate (Jember)',
+                    year: '2024–Sekarang',
+                    category: 'Desain Visual SOP',
+                    summary: 'Integrasi pengawasan kepatuhan Prosedur Operasional Standar (SOP) produksi dan pengemasan dengan komunikasi visual agar instruksi kerja mudah dipahami tim.',
+                    impactMetric: 'Konsistensi mutu produksi & kelancaran rantai pengemasan hingga distribusi',
+                    challenge: 'Prosedur operasional standar (SOP) yang berbentuk dokumen teks panjang sering kali sulit dicerna secara cepat oleh staf produksi dan dapur di tengah ritme kerja harian yang padat.',
+                    solution: 'Mengawasi langsung jalannya produksi dan pengemasan harian sekaligus memanfaatkan keahlian Desain Grafis untuk menerjemahkan prosedur teknis serta parameter kualitas menjadi panduan visual yang ringkas, jelas, dan menarik.',
+                    stack: ['SOP Compliance', 'Quality Assurance', 'Desain Grafis Instruksional', 'Pengemasan & Distribusi', 'Kitchen Operations']
+                },
+                {
+                    id: 'adirasa-bar',
+                    title: 'Standarisasi Operasional Harian Bar & Konsistensi Produk F&B',
+                    client: 'Kedai Kopi Adirasa (Situbondo)',
+                    year: '2026–Sekarang',
+                    category: 'Operasional & K3',
+                    summary: 'Pengelolaan alur kerja harian bar kopi, pengendalian takaran resep (quality control F&B), dan peningkatan kecepatan serta keramahan pelayanan pelanggan.',
+                    impactMetric: 'Konsistensi rasa produk F&B & efisiensi waktu penyajian harian',
+                    challenge: 'Menjaga konsistensi rasa minuman dan kecepatan pelayanan pada jam sibuk membutuhkan alur bar yang tertata rapi serta disiplin pada takaran bahan baku.',
+                    solution: 'Menerapkan prinsip manajemen operasional dan pengendalian mutu pada persiapan bahan (mise en place), kalibrasi ekstraksi minuman, kebersihan area kerja, serta komunikasi pelayanan pelanggan yang responsif.',
+                    stack: ['Barista Operations', 'F&B Quality Control', 'Customer Service', 'Manajemen Inventori Bar']
+                }
+            ];
+
+            /* ------------------------------------------
+               2. PENGELOLA TEMA (DARK / LIGHT MODE)
+            ------------------------------------------- */
+            const ThemeManager = {
+                init() {
+                    this.toggleBtn = document.getElementById('theme-toggle');
+                    const savedTheme = localStorage.getItem('reyhan_theme');
+
+                    if (savedTheme === 'light') {
+                        document.documentElement.classList.remove('dark');
+                    } else {
+                        // Default ke Dark Mode agar aksen #3fe0d0 tampil maksimal
+                        document.documentElement.classList.add('dark');
+                    }
+
+                    this.toggleBtn.addEventListener('click', () => this.toggle());
+                },
+                toggle() {
+                    const isDark = document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('reyhan_theme', isDark ? 'dark' : 'light');
+                    Toast.show(isDark ? 'Mode Gelap (#3fe0d0) aktif' : 'Mode Terang aktif');
+                }
+            };
+
+            /* ------------------------------------------
+               3. TOAST NOTIFICATION MANAGER
+            ------------------------------------------- */
+            const Toast = {
+                timeoutId: null,
+                show(message) {
+                    const toastEl = document.getElementById('toast');
+                    const msgEl = document.getElementById('toast-message');
+                    if (!toastEl || !msgEl) return;
+
+                    msgEl.textContent = message;
+                    toastEl.classList.remove('opacity-0', 'translate-y-3');
+                    toastEl.classList.add('opacity-100', 'translate-y-0');
+
+                    clearTimeout(this.timeoutId);
+                    this.timeoutId = setTimeout(() => {
+                        toastEl.classList.remove('opacity-100', 'translate-y-0');
+                        toastEl.classList.add('opacity-0', 'translate-y-3');
+                    }, 2800);
+                }
+            };
+
+            /* ------------------------------------------
+               4. RENDER & FILTER PROYEK + MODAL STUDI KASUS
+            ------------------------------------------- */
+            const PortfolioWorks = {
+                init() {
+                    this.gridEl = document.getElementById('projects-grid');
+                    this.filterBtns = document.querySelectorAll('.filter-btn');
+                    this.modalEl = document.getElementById('project-modal');
+                    
+                    this.renderProjects('Semua');
+                    this.bindEvents();
+                },
+
+                renderProjects(category) {
+                    const filtered = category === 'Semua' 
+                        ? PROJECTS_DATA 
+                        : PROJECTS_DATA.filter(p => p.category === category);
+
+                    this.gridEl.innerHTML = filtered.map((project, idx) => `
+                        <article class="swiss-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 font-mono text-xs mb-4">
+                                    <span class="px-2.5 py-1 rounded-md brand-pill font-semibold">0${idx + 1} / ${project.category.toUpperCase()}</span>
+                                    <span class="text-[var(--text-muted)]">${project.year}</span>
+                                </div>
+
+                                <h3 class="text-lg sm:text-xl font-semibold group-hover:text-[var(--brand-strong)] transition-colors">
+                                    ${project.title}
+                                </h3>
+                                <div class="text-xs font-mono text-[var(--text-muted)] mt-1.5 mb-4">${project.client}</div>
+
+                                <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
+                                    ${project.summary}
+                                </p>
+                            </div>
+
+                            <div>
+                                <!-- Kotak Metrik Dampak -->
+                                <div class="p-3.5 rounded-xl bg-[var(--bg-primary)] border swiss-border mb-5">
+                                    <div class="text-[10px] font-mono uppercase tracking-wider text-[var(--brand-strong)] font-semibold">Fokus Capaian &amp; Nilai Tambah</div>
+                                    <div class="text-xs sm:text-sm font-medium mt-0.5">${project.impactMetric}</div>
+                                </div>
+
+                                <!-- Tech Stack & Tombol Detail -->
+                                <div class="flex items-center justify-between gap-4 pt-3 border-t swiss-border">
+                                    <div class="flex flex-wrap gap-1.5">
+                                        ${project.stack.slice(0, 2).map(tech => `
+                                            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-[var(--bg-primary)] border swiss-border text-[var(--text-secondary)]">
+                                                ${tech}
+                                            </span>
+                                        `).join('')}
+                                    </div>
+
+                                    <button type="button" data-project-id="${project.id}" class="open-case-study text-xs font-mono font-semibold text-[var(--brand-strong)] hover:underline underline-offset-4 shrink-0 py-1.5 px-2 -mr-2">
+                                        Detail Studi Kasus →
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    `).join('');
+                },
+
+                openModal(projectId) {
+                    const project = PROJECTS_DATA.find(p => p.id === projectId);
+                    if (!project) return;
+
+                    document.getElementById('modal-category').textContent = `${project.category} — ${project.client}`;
+                    document.getElementById('modal-title').textContent = project.title;
+                    document.getElementById('modal-impact').textContent = project.impactMetric;
+                    document.getElementById('modal-challenge').textContent = project.challenge;
+                    document.getElementById('modal-solution').textContent = project.solution;
+                    document.getElementById('modal-year').textContent = `Periode Pelaksanaan: ${project.year}`;
+
+                    const stackContainer = document.getElementById('modal-stack');
+                    stackContainer.innerHTML = project.stack.map(item => `
+                        <span class="px-3 py-1 rounded-lg text-xs font-mono brand-pill">
+                            ${item}
+                        </span>
+                    `).join('');
+
+                    this.modalEl.classList.remove('hidden');
+                    this.modalEl.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                },
+
+                closeModal() {
+                    this.modalEl.classList.add('hidden');
+                    this.modalEl.classList.remove('flex');
+                    document.body.style.overflow = '';
+                },
+
+                bindEvents() {
+                    // Event Filter Kategori
+                    this.filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const category = btn.getAttribute('data-filter');
+                            
+                            this.filterBtns.forEach(b => {
+                                b.className = 'filter-btn px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all shrink-0 border swiss-border bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:border-[#3fe0d0]';
+                            });
+                            btn.className = 'filter-btn active px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 brand-btn-primary';
+
+                            this.renderProjects(category);
+                        });
+                    });
+
+                    // Event Delegation untuk Buka Modal
+                    this.gridEl.addEventListener('click', (e) => {
+                        const trigger = e.target.closest('.open-case-study');
+                        if (trigger) {
+                            this.openModal(trigger.getAttribute('data-project-id'));
+                        }
+                    });
+
+                    // Tutup Modal
+                    document.getElementById('close-modal').addEventListener('click', () => this.closeModal());
+                    document.getElementById('modal-close-btn').addEventListener('click', () => this.closeModal());
+                    this.modalEl.addEventListener('click', (e) => {
+                        if (e.target === this.modalEl) this.closeModal();
+                    });
+                    window.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && !this.modalEl.classList.contains('hidden')) {
+                            this.closeModal();
+                        }
+                    });
+                }
+            };
+
+            /* ------------------------------------------
+               5. INTEGRASI WHATSAPP & CETAK CV
+            ------------------------------------------- */
+            const ContactInteractions = {
+                // Konfigurasi nomor WhatsApp (format internasional tanpa '+', contoh: 628xxxxxxxxxx)
+                whatsappNumber: '6287775760566',
+                displayWhatsappNumber: '+62 877-7576-0566',
+
+                init() {
+                    const heroWaBtn = document.getElementById('hero-wa-btn');
+                    const contactCopyWaBtn = document.getElementById('contact-copy-wa');
+                    const printCvBtn = document.getElementById('print-cv-btn');
+                    const form = document.getElementById('contact-form');
+
+                    if (heroWaBtn) {
+                        heroWaBtn.addEventListener('click', (e) => {
+                            // Scroll halus ke kontak section jika di-klik
+                        });
+                    }
+
+                    if (contactCopyWaBtn) {
+                        contactCopyWaBtn.addEventListener('click', () => this.copyWhatsApp());
+                    }
+                    
+                    if (printCvBtn) {
+                        printCvBtn.addEventListener('click', () => {
+                            Toast.show('Membuka dialog cetak PDF portofolio...');
+                            setTimeout(() => window.print(), 400);
+                        });
+                    }
+
+                    if (form) {
+                        form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+                    }
+                },
+
+                copyWhatsApp() {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = this.displayWhatsappNumber;
+                    tempInput.style.position = 'fixed';
+                    tempInput.style.opacity = '0';
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        Toast.show(`Nomor WhatsApp ${this.displayWhatsappNumber} disalin!`);
+                    } catch (err) {
+                        Toast.show(`WhatsApp: ${this.displayWhatsappNumber}`);
+                    }
+                    document.body.removeChild(tempInput);
+                },
+
+                handleFormSubmit(e) {
+                    e.preventDefault();
+                    const nameInput = document.getElementById('name');
+                    const contactInput = document.getElementById('contact-info');
+                    const scopeInput = document.getElementById('scope');
+                    const messageInput = document.getElementById('message');
+
+                    const errName = document.getElementById('error-name');
+                    const errContact = document.getElementById('error-contact');
+                    const errMsg = document.getElementById('error-message');
+
+                    let isValid = true;
+
+                    if (!nameInput.value || nameInput.value.trim().length < 2) {
+                        errName.classList.remove('hidden');
+                        isValid = false;
+                    } else {
+                        errName.classList.add('hidden');
+                    }
+
+                    if (!contactInput.value || contactInput.value.trim().length < 3) {
+                        errContact.classList.remove('hidden');
+                        isValid = false;
+                    } else {
+                        errContact.classList.add('hidden');
+                    }
+
+                    if (!messageInput.value || messageInput.value.trim().length < 10) {
+                        errMsg.classList.remove('hidden');
+                        isValid = false;
+                    } else {
+                        errMsg.classList.add('hidden');
+                    }
+
+                    if (isValid) {
+                        const name = nameInput.value.trim();
+                        const contact = contactInput.value.trim();
+                        const scope = scopeInput.value;
+                        const message = messageInput.value.trim();
+
+                        const waText = 
+                            `Halo Reyhan Satrio Rayo, saya menghubungi via website portofolio:\n\n` +
+                            `👤 *Nama / Instansi:* ${name}\n` +
+                            `📱 *Kontak Pengirim:* ${contact}\n` +
+                            `📌 *Kebutuhan / Posisi:* ${scope}\n\n` +
+                            `💬 *Pesan:*\n${message}\n\n` +
+                            `---\n` +
+                            `_Terkirim otomatis dari Form Portofolio Reyhan_`;
+
+                        const encodedText = encodeURIComponent(waText);
+                        const waUrl = `https://api.whatsapp.com/send?phone=${this.whatsappNumber}&text=${encodedText}`;
+
+                        Toast.show(`Terima kasih, ${name}! Mengarahkan langsung ke WhatsApp...`);
+                        
+                        setTimeout(() => {
+                            window.open(waUrl, '_blank');
+                        }, 400);
+
+                        e.target.reset();
+                    }
+                }
+            };
+
+            /* ------------------------------------------
+               6. JAM LOKAL JAWA TIMUR (WIB)
+            ------------------------------------------- */
+            function initClock() {
+                const clockEl = document.getElementById('live-clock');
+                if (!clockEl) return;
+
+                const updateClock = () => {
+                    const now = new Date();
+                    const formatter = new Intl.DateTimeFormat('id-ID', {
+                        timeZone: 'Asia/Jakarta',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                    });
+                    clockEl.textContent = formatter.format(now);
+                };
+
+                updateClock();
+                setInterval(updateClock, 30000);
+            }
+
+            /* ------------------------------------------
+               BOOTSTRAPPING APLIKASI
+            ------------------------------------------- */
+            document.addEventListener('DOMContentLoaded', () => {
+                ThemeManager.init();
+                PortfolioWorks.init();
+                ContactInteractions.init();
+                initClock();
+            });
+        })();
+    </script>
+</body>
+</html>
